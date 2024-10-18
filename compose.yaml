@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    image: assets-challenge
+    pull_policy: build
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_USERNAME: myuser
+      SPRING_DATA_MONGODB_PASSWORD: mypassword
+      SPRING_DATA_MONGODB_DATABASE: database
+
+  mongodb:
+    image: mongo:8.0.0
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myuser
+      MONGO_INITDB_ROOT_PASSWORD: mypassword

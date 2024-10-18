@@ -1,1 +1,4 @@
-
+spring:
+  data:
+    mongodb:
+      authentication-database: admin

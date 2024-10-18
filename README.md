@@ -1,6 +1,5 @@
 # Getting Started
 
-
 ### Technical challenge (for developers)
 
 - Use any architecture you are comfortable with
@@ -27,14 +26,14 @@ it's not necessary to add additional attributes to the models (if you want to fe
 is a string, we are pretending it represents a URL to a file stored in a CDN that was magically created for you.
 
 - Create a simple web application for managing creatives.
-- An end user should be able to:
+- An end user should be able to:1
   - Create a brand
   - Create a campaign for a specific brand
   - Upload a creative for a specific brand campaign combination.
 
 - In this example, Authentication is not required.
 
-# Example resources
+### Example resources
 
 #### Brand:
   - Create a brand
@@ -51,8 +50,16 @@ is a string, we are pretending it represents a URL to a file stored in a CDN tha
 Feel free to create any additional resources you think would be necessary to make it simple for a UI to consume if
 there is a large number of each entity type.
 
-#### Steps to proceed:
- - Please create a private Github repository with your solution, and share it with us.
-   - Eric Walzthony <eric.walzthony@smartassets.ai>
-   - Andrey Nunez <andrey.nunez@smartassets.ai>
-   - Nathan Hotchkin <nathan.hotchkin@smartassets.ai>
+### Development
+#### Features
+  - NoSql Mongodb database
+  - Unit test (junit) and Integration test (testcontainers)
+  - OpenApi and Swagger integration
+  - Pagination in request
+
+#### Deployment
+  - Test: mvn test
+  - Compile: mvn clean compile
+  - Package: mvn clean package
+  - Deploy: docker compose up
+  - Swagger UI: http://localhost:8080/swagger-ui/index.html
